@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="less/index.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        头部
+    </header>
+    <main id="main">
+        <div class="search-from">
+        </div>
+        <nav id="nav">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="#">
+                        <img src="images/gengduo.png" alt="">
+                    </a>
+                    <p>比价搜索</p>
+                </div>
+            </div>
+        </nav>
+        <section id="productlist">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" src="..." alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">Media heading</h4>
+                    <div>
+                    	<span class="pull-left">京东商城 | 10-25 14:10</span>
+                    	<span class="pull-right">评论1</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <header id="footer">
+        底部
+    </header>
+    <script type="text/html" id="navTmp">
+        <!-- {{}}里面写#可以解析标签类型的字符串 -->
+        {{each result as value i}}
+        <div class="col-xs-3">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+            </a>
+            <p>{{value.name}}</p>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/html" id="productlistTmp">
+    {{each result as value i}}
+    	<div class="media">
+                <div class="media-left">
+                    <a href="#">
+                       {{#value.productImgSm}}
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{value.productName}}</h4>
+                    <div>
+                    	<span class="pull-left">{{value.productFrom}} |{{value.productTime}}</span>
+                    	<span class="pull-right">评论{{value.productComCount.replace('有','').replace('人评论','')}}</span>
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+    </script>
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
