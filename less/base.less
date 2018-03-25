@@ -53,6 +53,9 @@ img {
 li {
     list-style: none;
 }
+i,em {
+    font-style: normal;
+}
 
 
 // 头部样式
@@ -120,6 +123,19 @@ li {
         .register {
             border-left: @border;
             border-right: @border;
+        }
+    }
+
+    .f-botom {
+        padding-top: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 16px;
+        >span {
+            color: red;
+        }
+        >i {
+            .h-color;
         }
     }
 
