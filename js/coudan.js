@@ -92,8 +92,7 @@ Coudan.prototype = {
     // 商品详情跳转
     goProductMsg: function () {
         $(".products").on("click", ".product-item", function () {
-            // var id = $(this).data("id");
-            // location.assign("" + id);
+
         });
     }
 
