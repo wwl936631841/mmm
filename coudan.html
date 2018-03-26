@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品--慢慢买比价网</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/coudan.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <a href="javascript:history.back();" class="left fa fa-arrow-left"></a>
+        <h3 class="center">凑单品</h3>
+        <a href="#" class="right fa fa-download"></a>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        <!-- 加载动画 -->
+        <div id="load" class="">
+            <div class="loadEffect">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- 导航条 -->
+        <div class="nav-bar">
+            <div class="nav dropdown" data-toggle="dropdown">
+                <div id="store" type="button" data-toggle="dropdown">
+                    <span>京东</span>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-menu stores" aria-labelledby="store">
+                    <!-- <li class="store-item active">京东
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+
+                    <li class="store-item">天猫超市
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="nav dropdown" data-toggle="dropdown">
+                <div id="area" type="button" data-toggle="dropdown">
+                    <span>华北</span>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-menu areas" aria-labelledby="area">
+                    <!-- <li class="area-item active">华北(北京/山西等)
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="area-item">西北(宁夏/新疆等)
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li> -->
+                </ul>
+            </div>
+            <div class="nav dropdown" data-toggle="dropdown">
+                <div id="price" type="button" data-toggle="dropdown">全部价格
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <ul class="dropdown-menu prices" aria-labelledby="price">
+                    <li class="price-item active">全部价格
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="price-item">1-3元
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="price-item">3-5元
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="price-item">5-10元
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="price-item">10-15元
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                    <li class="price-item">15元以上
+                        <i class="glyphicon glyphicon-ok"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="line"></div>
+            <div class="search fa fa-bars ">
+            </div>
+            <div class="search-box hide">
+                <div class="header">
+                    <span class="fa fa-search"></span>
+                    <input class="search-input" type="text" placeholder="搜索你想要的凑单品">
+                    <a href="#">搜索</a>
+                </div>
+                <div class="rank clearfix">
+                    <div class="title">排序</div>
+                    <div class="num item">销量</div>
+                    <div class="price-up item active">价格上</div>
+                    <div class="price-down item">价格下</div>
+                </div>
+                <div class="category clearfix">
+                    <div class="title">分类</div>
+                    <span class="active">全部</span>
+                    <span>家居</span>
+                    <span>数码</span>
+                    <span>办公</span>
+                    <span>个护</span>
+                    <span>食品</span>
+                    <span>母婴</span>
+                    <span>服饰</span>
+                </div>
+
+            </div>
+        </div>
+        <!-- 商品 -->
+        <div class="products">
+            <!-- <div class="product-item">
+                <img src="" alt="" data-name="">
+                <p class="title">拍下就是赚到</p>
+                <div class="price">
+                    ￥
+                    <span>0.01</span>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="" alt="" data-name="">
+                <p class="title">拍下就是赚到</p>
+                <div class="price">
+                    ￥
+                    <span>0.01</span>
+                </div>
+            </div> -->
+        </div>
+
+
+    </main>
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="f-top row">
+            <a href="#" class="col-xs-4">登录</a>
+            <a href="#" class="col-xs-4 register">注册</a>
+            <a href="#" class="col-xs-4">
+                <span class="fa fa-arrow-circle-o-up"></span> 返回顶部
+            </a>
+        </div>
+        <div class="f-botom">
+            <span>手机APP下载 </span>
+            <i>慢慢买手机版 -- 掌上比价平台</i>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+
+
+
+    <script type="text/html" id="storeTmp">
+        {{each result as value i}}
+        <li class="store-item {{i==0?'active':''}}" data-id="{{i==0?'0':''}}{{value.shopId}}">{{value.shopName}}
+            <i class="glyphicon glyphicon-ok"></i>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="areaTmp">
+        {{each result as value i}}
+        <li class="area-item {{i==0?'active':''}}" data-id="{{i==0?'0':''}}{{value.areaId}}">{{value.areaName}}
+            <i class="glyphicon glyphicon-ok"></i>
+        </li>
+        {{/each}}
+    </script>
+
+    <script type="text/html" id="productTmp">
+        {{each result as value i}}
+        <div class="product-item" data-shopId="{{value.shopId}}" data-id="{{value.productId}}" data-areaId="{{value.areaId}}">
+            <img src="{{value.productImg}}" alt="">
+            <p class="title">{{value.productName}}</p>
+            <div class="price">
+                <span>{{value.productPrice}}</span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="./lib/jquery/jquery-1.12.4.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/coudan.js"></script>
+</body>
+
+</html>

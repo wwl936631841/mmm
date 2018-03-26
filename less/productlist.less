@@ -1,0 +1,105 @@
+@import 'base.less';
+body {
+    position: relative;
+    #preparation {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-radius: 10%;
+        position: absolute;
+        right: 10px;
+        top: 103px;
+    }
+}
+
+#main {
+    background-color: #ebebeb;
+    height: 100%;
+    .path {
+        .breadcrumb {
+            margin: 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .breadcrumb>li+li:before {
+        content: "\3E";
+    }
+    .product-list {
+        background-color: #fff;
+        .media-list {
+            .media {
+                margin: 0;
+                padding: 10px 8px;
+                border-bottom: 1px solid #ccc;
+                a {
+                    display: flex;
+                    text-decoration: none;
+                    .media-left {
+                        flex: 1;
+                        img {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
+                    .media-body {
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        .media-heading {
+                            font-size: 14px;
+                            color: #000;
+                        }
+                        .price {
+                            color: #ed0000;
+                            font-size: 18px;
+                            overflow: hidden;
+                            margin-top: 6px;
+                        }
+                        .other {
+                            width: 100%;
+                            font-size: 12px;
+                            color: #ccc;
+                            .offer {
+                                float: left;
+                            }
+                            .comment {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page {
+        text-align: center;
+        margin: 20px 0;
+        padding: 0;
+        font-style: normal;
+        tbody {
+            tr {
+                td {
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        box-sizing: border-box;
+                        background-color: #d4d4d4;
+                        background:gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+                        border-bottom: 1px solid #bababa;
+                        box-shadow: 0 0 1px #666;
+                        border-radius: 5px;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 32px;
+                        padding: 8px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

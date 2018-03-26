@@ -1,0 +1,74 @@
+@import 'base.less';
+body {
+    position: relative;
+    #preparation {
+        width: 50px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        border-radius: 10%;
+        position: absolute;
+        right: 10px;
+        top: 103px;
+    }
+}
+
+#main {
+    background-color: #fff;
+    height: 100%;
+    .path {
+        .breadcrumb {
+            margin: 0;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .breadcrumb>li+li:before {
+        content: "\3E";
+    }
+    .product {
+        padding: 30px;
+        position: relative;
+        .introduction {
+            p {
+                color: #000;
+                font-size: 16px;
+                text-align: center;
+            }
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+            .collect {
+                width: 44px;
+                height: 44px;
+                background: radial-gradient(rgb(6, 240, 56), rgb(6, 241, 131));
+                ;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 44px;
+                position: absolute;
+                bottom: 15%;
+                right: 11%;
+            }
+        }
+    }
+    .option {
+        ul {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            // justify-content: center;
+            width: 100%;
+            li {
+                width: 33.3333%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background-color: #ffc526;
+            }
+        }
+    }
+}

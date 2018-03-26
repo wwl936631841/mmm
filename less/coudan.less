@@ -1,0 +1,362 @@
+@import "base.less";
+
+body {
+    background-color: #f1f1f1;
+}
+
+#header{
+    position: relative;
+    >a {
+        position: absolute;
+        top:15px;
+        font-size: 20px;
+        color: #fff;
+    }
+    .left {
+        left: 15px;
+    }
+    .center {
+        text-align: center;
+        color: #fff;
+    }
+    .right{ 
+        right: 15px;
+    }
+}
+
+#main {
+    height: auto;
+    a {
+        text-decoration: none;
+    }
+    background-color: #f1f1f1;
+    .nav-bar {
+        position: relative;
+        font-size: 16px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        .nav {
+            flex: 1;
+            text-align: center;
+            >ul {
+                margin: 0;
+                padding: 0;
+                border:0;
+                min-width: 350%;
+                top: 32px;
+                >li {
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 15px;
+                    font-size: 16px;
+                    border-bottom: 1px solid #ccc;
+                    >i{
+                        float: right;
+                        margin-top: 10px;
+                        margin-right: 5%;
+                        color: @main-color;
+                        display: none;
+                    }
+                }
+                >.active {
+                    >i{
+                        display: block;
+                    }
+                }
+            }
+            .areas {
+                left: -112px;
+            }
+            .prices {
+                left: -224px;
+            }
+
+        }
+        .search {
+            text-align: center;
+            flex-basis: 40px;
+        }
+        .line{
+            position: absolute;
+            right: 40px;
+            height: 100%;
+            width: 1px;
+            background-color: #ccc;
+        }
+        .search-box {
+            position: absolute;
+            width: 100%;
+            top: 40px;
+            background-color: #f7f7f7;
+            padding: 10px;
+            .header {
+                position: relative;
+                margin-bottom: 20px;
+                >input {
+                    width: 85%;
+                    height: 30px;
+                    padding-left: 30px;
+                    &::placeholder{
+                        color: @main-color;
+                        font-size: 14px;
+                    }
+                }
+                >span {
+                    position: absolute; 
+                    color: #ccc;
+                    top: 7px;
+                    left: 7px;
+                }
+                >a {
+                    text-align: center;
+                    color: #333;
+                    margin-left: 10px;
+                }
+            }
+            .rank {
+
+                .title {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .item {
+                    float: left;
+                    width: 80px;
+                    height: 30px;
+                    border: 1px solid #000;
+                    border-radius: 4px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    &.active {
+                        background-color: @main-color;
+                        border-color: @main-color;
+                    }
+                }
+            }
+            .category {
+
+                .title {
+                    width: 100%;
+                    margin: 10px 0;
+                }
+                >span {
+                    float: left;
+                    width: 80px;
+                    height: 30px;
+                    border: 1px solid #333;
+                    border-radius: 4px;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    &.active {
+                        background-color: @main-color;
+                        border-color: @main-color;
+                    }
+                    &:nth-child(4n+1){
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .products {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .product-item {
+            margin-top: 10px;
+            width: 45%;
+            height: 220px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px #ccc;
+            >img {
+                max-height: 160px;
+                display: block;
+                width: 100%;
+            }
+            >p {
+                overflow: hidden;
+                color: #333;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: 0 3px 10px;
+            }
+            .price {
+                color: @main-color;
+                padding: 0 10px;
+                >span{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    margin-top: 30px;
+    width: 100%;
+    .f-top {
+        width: 100%;
+        border-top: 1px solid #dedede;
+        border-bottom: 1px solid #dedede;
+        overflow: hidden;
+        margin: 0;
+        >a{
+            border-right: 1px solid #dedede;
+            &:last-child{
+                border-right: 0;
+            }
+        }
+        .register{
+            border-right: 1px solid #dedede;
+        }
+    }
+}
+
+
+
+#load {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    z-index: 998;
+}
+
+.loadEffect {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.loadEffect span {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: @main-color;
+    position: absolute;
+    -webkit-animation: load 1.04s ease infinite;
+}
+
+@-webkit-keyframes load {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+.loadEffect span:nth-child(1) {
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    -webkit-animation-delay: 0.13s;
+}
+
+.loadEffect span:nth-child(2) {
+    left: 14px;
+    top: 14px;
+    -webkit-animation-delay: 0.26s;
+}
+
+.loadEffect span:nth-child(3) {
+    left: 50%;
+    top: 0;
+    margin-left: -8px;
+    -webkit-animation-delay: 0.39s;
+}
+
+.loadEffect span:nth-child(4) {
+    top: 14px;
+    right: 14px;
+    -webkit-animation-delay: 0.52s;
+}
+
+.loadEffect span:nth-child(5) {
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    -webkit-animation-delay: 0.65s;
+}
+
+.loadEffect span:nth-child(6) {
+    right: 14px;
+    bottom: 14px;
+    -webkit-animation-delay: 0.78s;
+}
+
+.loadEffect span:nth-child(7) {
+    bottom: 0;
+    left: 50%;
+    margin-left: -8px;
+    -webkit-animation-delay: 0.91s;
+}
+
+.loadEffect span:nth-child(8) {
+    bottom: 14px;
+    left: 14px;
+    -webkit-animation-delay: 1.04s;
+}
+
+object,
+embed {
+    -webkit-animation-duration: .001s;
+    -webkit-animation-name: playerInserted;
+    -ms-animation-duration: .001s;
+    -ms-animation-name: playerInserted;
+    -o-animation-duration: .001s;
+    -o-animation-name: playerInserted;
+    animation-duration: .001s;
+    animation-name: playerInserted;
+}
+
+@-webkit-keyframes playerInserted {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes playerInserted {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes playerInserted {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes playerInserted {
+    from {
+        opacity: 0.99;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
