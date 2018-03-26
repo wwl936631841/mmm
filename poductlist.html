@@ -15,7 +15,7 @@
     <!-- 引入字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
     <!-- 引入本页面样式 -->
-    <link rel="stylesheet/less" href="./less/category.less">
+    <link rel="stylesheet/less" href="./less/productlist.less">
     <!--  引入less文件 -->
     <script src="./lib/less/less.js"></script>
 </head>
@@ -35,9 +35,44 @@
         <input type="text" name="" id="" placeholder="客官请输入">
         <a href="#">搜索</a>
     </div>
+    <div id="preparation">
+        筛选
+    </div>
     <main id="main">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
+        <div class="path">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="category.html">全部分类</a>
+                </li>
+                <li class="active">
+                    <a href="#"></a>
+                </li>
+            </ol>
+        </div>
+        <div class="product-list">
+            <ul class="media-list"></ul>
+        </div>
+        </div>
+        <div class="page">
+            <table width="100%">
+                <tr>
+                    <td>
+                        <a  href="#" id="prev">上一页</a>
+                    </td>
+                    <td>
+                        <form action="#">
+                            <select id="selectPage">
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="#" id="next">下一页</a>
+                    </td>
+                </tr>
+            </table>
         </div>
     </main>
     <!-- 底部栏 -->
@@ -52,41 +87,37 @@
             <span>手机APP下载 </span>
             <i>慢慢买手机版 -- 掌上比价平台</i>
             <p>m.manmanbuy.com</p>
-
         </div>
     </footer>
 
 </body>
-<script type="text/html" id="listclassTmp">
+<script type="text/html" id="productListTmp">
     {{each result as value i}}
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="{{value.titleId}}">
-            <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{value.titleId}}" aria-expanded="true" aria-controls="collapse{{value.titleId}}"
-                    class="title" data-id="{{value.titleId}}">
-                    {{value.title}}
-                    <span class="fa fa-angle-down"></span>
-                </a>
-            </h4>
-        </div>
-        <div id="collapse{{value.titleId}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{value.titleId}}">
-            <div class="panel-body">
-                <ul></ul>
+    <li class="media">
+        <a href="#">
+            <div class="media-left">
+                {{#value.productImg}}
             </div>
-        </div>
-    </div>
-    {{/each}}
-</script>
-<script type="text/html" id="getcategoryTmp">
-    {{each result}}
-    <li data-id="{{$value.categoryId}}" data-v=" {{$value.__v}}" data-fullid=" {{$value._id}}" class="getcategorybyid">
-        {{$value.category}}
+            <div class="media-body">
+                <p class="media-heading">{{#value.productName}}</p>
+                <p class="price">{{#value.productPrice}}</p>
+                <div class="other">
+                    <span class="offer">{{#value.productQuote}}</span>
+                    <span class="comment">{{#value.productCom}}</span>
+                </div>
+            </div>
+        </a>
     </li>
     {{/each}}
 </script>
+<!-- <script type="text/html" id="pageTmp">
+    {{each}}
+    <option selected="selected" value="1">{{totalCount}}</option>
+    {{/each}}
+</script> -->
 <script src="./lib/jquery/jquery-1.12.4.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/template/template.js"></script>
-<script src="/js/category.js"></script>
+<script src="/js/productlist.js"></script>
 
 </html>

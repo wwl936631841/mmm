@@ -15,7 +15,7 @@
     <!-- 引入字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
     <!-- 引入本页面样式 -->
-    <link rel="stylesheet/less" href="./less/category.less">
+    <link rel="stylesheet/less" href="./less/detial.less">
     <!--  引入less文件 -->
     <script src="./lib/less/less.js"></script>
 </head>
@@ -35,9 +35,38 @@
         <input type="text" name="" id="" placeholder="客官请输入">
         <a href="#">搜索</a>
     </div>
+    <div id="preparation">
+        筛选
+    </div>
     <main id="main">
-        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
+        <div class="path">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="#">电视</a>
+                </li>
+                <li class="active">
+                    <a href="#"></a>
+                </li>
+            </ol>
+        </div>
+        <div class="product">
+            <div class="introduction">
+                <p>乐视TV(Letv)S50 Air全配版2D 50英寸 全高清LED液晶电视</p>
+                <img src="http://pro.zuyushop.com:8015/ProPic/20166/Thumb/Thumb_2016060015530027148.png" alt="飞利浦(PHILIPS)32PHF3061/T3 32英寸 高清LED液晶电视"
+                    width="170">
+                <div class="collect">收藏</div>
+            </div>
+            <div class="option">
+                <ul>
+                    <li>比价购买</li>
+                    <li>商品参数</li>
+                    <li>评价</li>
+                </ul>
+            </div>
+        </div>
         </div>
     </main>
     <!-- 底部栏 -->
@@ -52,41 +81,13 @@
             <span>手机APP下载 </span>
             <i>慢慢买手机版 -- 掌上比价平台</i>
             <p>m.manmanbuy.com</p>
-
         </div>
     </footer>
 
 </body>
-<script type="text/html" id="listclassTmp">
-    {{each result as value i}}
-    <div class="panel panel-default">
-        <div class="panel-heading" role="tab" id="{{value.titleId}}">
-            <h4 class="panel-title">
-                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{value.titleId}}" aria-expanded="true" aria-controls="collapse{{value.titleId}}"
-                    class="title" data-id="{{value.titleId}}">
-                    {{value.title}}
-                    <span class="fa fa-angle-down"></span>
-                </a>
-            </h4>
-        </div>
-        <div id="collapse{{value.titleId}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="{{value.titleId}}">
-            <div class="panel-body">
-                <ul></ul>
-            </div>
-        </div>
-    </div>
-    {{/each}}
-</script>
-<script type="text/html" id="getcategoryTmp">
-    {{each result}}
-    <li data-id="{{$value.categoryId}}" data-v=" {{$value.__v}}" data-fullid=" {{$value._id}}" class="getcategorybyid">
-        {{$value.category}}
-    </li>
-    {{/each}}
-</script>
 <script src="./lib/jquery/jquery-1.12.4.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/template/template.js"></script>
-<script src="/js/category.js"></script>
+<script src="/js/detial.js"></script>
 
 </html>

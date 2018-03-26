@@ -1,0 +1,210 @@
+.bgcolor {
+  background-color: #ff841d;
+}
+.color {
+  color: #fff;
+}
+.h-color {
+  color: #666;
+}
+body,
+a,
+div,
+span,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+input,
+button,
+p {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #fff;
+}
+input {
+  border: 0 none;
+  outline: none;
+  vertical-align: middle;
+}
+img {
+  vertical-align: middle;
+}
+li {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+#header {
+  padding: 10px 10px;
+  width: 100%;
+  height: 50px;
+  background-color: #ff841d;
+}
+#header > a img {
+  height: 30px;
+}
+#seach {
+  position: relative;
+  padding: 10px 12px;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+#seach > input {
+  height: 30px;
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  border: 0 none;
+  font-size: 14px;
+}
+#seach > a {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  height: 30px;
+  width: 70px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 30px;
+  font-size: 15px;
+  background-color: #ff841d;
+  color: #fff;
+}
+#main {
+  width: 100%;
+  height: 1500px;
+  background-color: red;
+}
+#footer {
+  width: 100%;
+  height: 95px;
+}
+#footer .f-top {
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+#footer .f-top > a {
+  font-size: 15px;
+  color: #666;
+}
+#footer .f-top .register {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#footer .f-botom {
+  padding-top: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+}
+#footer .f-botom > span {
+  color: red;
+}
+#footer .f-botom > i {
+  color: #666;
+}
+body {
+  position: relative;
+}
+body #preparation {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 10%;
+  position: absolute;
+  right: 10px;
+  top: 103px;
+}
+#main {
+  background-color: #ebebeb;
+  height: 100%;
+}
+#main .path .breadcrumb {
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+#main .breadcrumb > li + li:before {
+  content: "\3E";
+}
+#main .product-list {
+  background-color: #fff;
+}
+#main .product-list .media-list .media {
+  margin: 0;
+  padding: 10px 8px;
+  border-bottom: 1px solid #ccc;
+}
+#main .product-list .media-list .media a {
+  display: flex;
+  text-decoration: none;
+}
+#main .product-list .media-list .media a .media-left {
+  flex: 1;
+}
+#main .product-list .media-list .media a .media-left img {
+  width: 120px;
+  height: 120px;
+}
+#main .product-list .media-list .media a .media-body {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#main .product-list .media-list .media a .media-body .media-heading {
+  font-size: 14px;
+  color: #000;
+}
+#main .product-list .media-list .media a .media-body .price {
+  color: #ed0000;
+  font-size: 18px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+#main .product-list .media-list .media a .media-body .other {
+  width: 100%;
+  font-size: 12px;
+  color: #ccc;
+}
+#main .product-list .media-list .media a .media-body .other .offer {
+  float: left;
+}
+#main .product-list .media-list .media a .media-body .other .comment {
+  float: right;
+}
+#main .page {
+  text-align: center;
+  margin: 20px 0;
+  padding: 0;
+  font-style: normal;
+}
+#main .page tbody tr td a {
+  text-decoration: none;
+  color: #000;
+  box-sizing: border-box;
+  background-color: #d4d4d4;
+  background: gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  border-bottom: 1px solid #bababa;
+  box-shadow: 0 0 1px #666;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 32px;
+  padding: 8px 20px;
+}
