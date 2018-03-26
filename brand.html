@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,8 @@
 
     <!-- 引入mui框架  -->
     <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入Bootstrap框架 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <!-- 引入字体图标 -->
     <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
     <!-- 引入本页面样式 -->
@@ -17,6 +20,7 @@
     <!--  引入less文件 -->
     <script src="./lib/less/less.js"></script>
 </head>
+
 <body>
     <!-- 头部 -->
     <header id="header">
@@ -35,26 +39,226 @@
     </div>
 
     <main id="main">
+        <div class="top-lan">
+            <a href="#">首页</a> >
+            <a href="#">品牌大全</a>
+        </div>
+        <div class="title">热门品牌排行</div>
+
+        <!-- bootstrap手风琴效果 -->
+        <!-- 带b-开头的类名为自己定义的 -->
+        <div class="container-fluid b-brand">
+
+            <div class="accordion" id="accordion2">
+
+                <!-- <div class="accordion-group">
+
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle b-content" data-toggle="collapse" data-parent="#accordion2" href="#one">
+                            平板电视十大品牌
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </div>
+
+                    <div id="one" class="accordion-body collapse" style="height: 0px; ">
+                        <div class="accordion-inner b-show">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle b-content" data-toggle="collapse" data-parent="#accordion2" href="#two">
+                            平板电视十大品牌
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </div>
+                    <div id="two" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle b-content" data-toggle="collapse" data-parent="#accordion2" href="#three">
+                            平板电视十大品牌
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </div>
+                    <div id="three" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle b-content" data-toggle="collapse" data-parent="#accordion2" href="#four">
+                            平板电视十大品牌
+                            <span class="mui-icon mui-icon-arrowdown"></span>
+                        </a>
+                    </div>
+                    <div id="four" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                            mollit anim id est laborum.
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+        </div>
 
     </main>
-    
+
     <!-- 底部栏 -->
     <footer id="footer">
         <div class="f-top mui-row">
             <a href="" class="mui-col-xs-4">登录</a>
             <a href="" class="mui-col-xs-4 register">注册</a>
-            <a href="" class="mui-col-xs-4"><span class="fa fa-arrow-circle-o-up"></span> 返回顶部</a>
+            <a href="" class="mui-col-xs-4">
+                <span class="fa fa-arrow-circle-o-up"></span> 返回顶部</a>
         </div>
         <div class="f-botom">
-            <span>手机APP下载 </span><i>慢慢买手机版 -- 掌上比价平台</i>
+            <span>手机APP下载 </span>
+            <i>慢慢买手机版 -- 掌上比价平台</i>
             <p>m.manmanbuy.com</p>
 
         </div>
-
     </footer>
+
+    <!-- 十大品牌一级菜单模板 -->
+    <script type="text/html" id="brand">
+        {{each result}}
+        <div class="accordion-group">
+            <!-- 一级菜单 -->
+            <div class="accordion-heading">
+                <a class="accordion-toggle b-content" data-toggle="collapse" data-parent="#accordion2" href="#box{{$index}}" data-id={{$value.brandTitleId}}>
+                    {{$value.brandTitle}}
+                    <span class="mui-icon mui-icon-arrowdown"></span>
+
+                </a>
+            </div>
+            <!-- 二级菜单 -->
+            <div id="box{{$index}}" class="accordion-body collapse" style="height: 0px; ">
+                <div class="accordion-inner b-show">
+                    <ul>
+
+                        <!-- <li>
+                            <a href="#">
+                                <div class="number">
+                                    <span class="mui-badge mui-badge-red">1</span>
+                                </div>
+                                <div class="content ">
+                                    <p>夏普平板电视</p>
+                                    <i>30天全网销量: 767894件</i>
+                                    <span class="mui-icon mui-icon-arrowright"></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="number">
+                                    <span class="mui-badge mui-badge-red">2</span>
+                                </div>
+                                <div class="content ">
+                                    <p>夏普平板电视</p>
+                                    <i>30天全网销量: 767894件</i>
+                                    <span class="mui-icon mui-icon-arrowright"></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="number">
+                                    <span class="mui-badge mui-badge-red">3</span>
+                                </div>
+                                <div class="content ">
+                                    <p>夏普平板电视</p>
+                                    <i>30天全网销量: 767894件</i>
+                                    <span class="mui-icon mui-icon-arrowright"></span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <div class="number">
+                                    <span class="mui-badge mui-badge-red">4</span>
+                                </div>
+                                <div class="content ">
+                                    <p>夏普平板电视</p>
+                                    <i>30天全网销量: 767894件</i>
+                                    <span class="mui-icon mui-icon-arrowright"></span>
+                                </div>
+                            </a>
+                        </li> -->
+
+                    </ul>
+                    <div class="more" data-id={{$value.brandTitleId}} data-name={{$value.brandTitle}}>
+                        点击进入详情
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+    <!-- 各自十大品牌二级菜单模板 -->
+    <script type="text/html" id="brand-show">
+        {{each result}}
+        <li>
+            <a href="#">
+                <div class="number">
+                    <span class="mui-badge mui-badge-red">{{$index+1}}</span>
+                </div>
+                <div class="content ">
+                    <p>{{$value.brandName}}</p>
+                    <i>{{$value.brandInfo}}</i>
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+
+
+
+    </script>
+
+
+
+
+
+
+
+    <!-- 引入第三方包 -->
     <script src="./lib/jquery/jquery-1.12.4.min.js"></script>
     <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/artTemplate/template.js"></script>
-    
+    <script src="./js/brand.js"></script>
 </body>
+
 </html>

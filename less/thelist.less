@@ -1,0 +1,148 @@
+@import "base.less";
+
+body {
+    background-color: #eee;
+}
+
+#main {
+    width: 100%;
+    .banner {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    a:hover,
+    a:focus {
+        text-decoration: none;        
+    }
+    .title {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: @main-color;
+        margin: 10px 0px;
+        padding-left: 10px;
+        border-top: @border;
+        border-bottom: @border;
+    }
+    .list {
+        >ul {
+            >li {
+                padding: 10px 15px 10px 10px;
+                border-bottom: @border;
+
+                .photo {
+                    float: left;
+    
+                    img {
+                        width: 100px;
+                        margin-right: 10px;
+                    }
+                }
+                .content {
+                    letter-spacing: 0.5px;
+                    >p {
+                        word-break: break-all;
+                        font-size: 15px;
+                        color: #111;
+                    }
+                    >.much {
+                        color: #eb4712;
+                        font-size: 20px;
+                        line-height: 40px; 
+                    }
+
+                    >.xing {
+                        float: right;
+                        color: #ff9000;
+                        font-size: 20px;
+                        line-height: 40px;                        
+                    }
+
+                }
+            }
+        }
+    }
+
+    .pinglun {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: @main-color;
+        padding-left: 10px;
+        border-bottom: @border;
+    }
+
+    .ping-list {
+        li {
+           padding: 10px;
+           border-bottom: @border; 
+
+           .ping-top {
+            margin-bottom: 15px;
+               .photo {
+                   float: left;
+                   width: 80px;
+                   margin-right: 15px;
+                   img {
+                       width: 100%;
+                   }
+               }
+       
+               .content {
+                   >p {
+                       font-size: 16px;
+                       word-break: break-all;
+                       color: #444;
+                       line-height: 25px;
+                       
+       
+                   }
+               }
+           }
+
+           .ping-font {
+               position: relative;
+               padding: 10px;
+               border: 1px solid #eee;
+               background-color: #fff;
+               line-height: 24px;
+            .name {
+                font-size: 16px;
+                line-height: 40px;
+                color: #2a36eb;
+            }
+            .start {
+                color: #ff9000;
+                font-size: 20px;                
+            }
+            .data {
+                float: right;
+                font-size: 16px;
+                line-height: 40px;
+                color: #777;
+            }
+
+            .neirong {
+                color: #111;
+            }
+
+            .sanjiao {
+                width:0px;
+                height: 0px;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #fff;
+                position: absolute;
+                left: 30px;
+                top: -10px;
+            }
+            
+           }
+
+        }
+        
+    }
+
+}
